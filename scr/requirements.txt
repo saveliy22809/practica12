@@ -1,0 +1,5 @@
+sqlalchemy
+bcrypt
+fastapi
+uvicorn
+jinja2

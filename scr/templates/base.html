@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <header>
+        <ul class="navbar">
+            <li class="active"><a href="/">Главная</a></li>
+            <li><a href="/menu">Меню</a></li>
+
+            {% if request.cookies.get('user_email') %}
+                <!-- Если пользователь вошел -->
+                <li><a href="/profile">Личный кабинет</a></li>
+                <li><a href="/logout">Выход</a></li>
+                <li><a href="/cart">Корзина</a></li>
+
+                {% if request.cookies.get('user_role') == 'admin' %}
+                    <!-- Если пользователь администратор -->
+                    <li><a href="/admin">Админ панель</a></li>
+                {% endif %}
+
+            {% else %}
+                <!-- Если пользователь не вошел -->
+                <li><a href="/login">Вход</a></li>
+                <li><a href="/register">Регистрация</a></li>
+            {% endif %}
+        </ul>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>FastFood &copy; 2024</p>
+    </footer>
+</body>
+</html>

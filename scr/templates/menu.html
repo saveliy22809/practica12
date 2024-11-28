@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Меню{% endblock %}
+
+{% block content %}
+<h1>Наше меню</h1>
+<ul>
+    {% for item in menu_items %}
+    <li>{{ item.name }} - {{ item.price }} ₽ (В наличии: {{ item.quantity_in_stock }})
+        <form action="/add_to_cart/{{ item.id }}" method="post">
+            <input type="number" name="quantity" min="1" max="{{ item.quantity_in_stock }}" required>
+            <button type="submit">Добавить в корзину</button>
+        </form>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профиль</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Профиль пользователя</h1>
+    </header>
+    <main>
+        <div class="profile-container">
+            <h2>Информация о пользователе</h2>
+            <p><strong>Имя:</strong> {{ client.first_name }}</p>
+            <p><strong>Фамилия:</strong> {{ client.last_name }}</p>
+            <p><strong>Телефон:</strong> {{ client.phone }}</p>
+            <p><strong>Пол:</strong> {{ client.gender }}</p>
+            <p><strong>Email:</strong> {{ client.email }}</p>
+
+            <a href="/profile/edit">Редактировать профиль</a>
+            <a href="/" class="logout-btn">Выйти на главную</a>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Все права защищены</p>
+    </footer>
+</body>
+</html>

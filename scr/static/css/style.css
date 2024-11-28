@@ -1,0 +1,369 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+ul, ol {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+li {
+    margin: 5px 0;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+li a {
+    text-decoration: none;
+    color: #007BFF;
+}
+
+li a:hover {
+    color: #0056b3;
+}
+
+.navbar li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+form {
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+button {
+    padding: 12px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.profile-container {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-container h2 {
+    margin-bottom: 20px;
+}
+
+/* Стили для контейнера профиля */
+.profile-container p {
+    font-size: 16px;
+    color: #555;
+}
+
+.profile-container .btn-edit {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.profile-container .btn-edit:hover {
+    background-color: #0056b3;
+}
+
+/* Убираем подчеркивание для ссылок */
+a {
+    text-decoration: none;
+    color: #333; /* Устанавливаем цвет текста для ссылок */
+}
+
+a:hover {
+    text-decoration: underline; /* Подчеркивание при наведении */
+    color: #0056b3; /* Цвет ссылки при наведении */
+}
+
+/* Стили для параметров пользователя */
+.profile-container p {
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc; /* Обводка */
+    border-radius: 5px; /* Скругление углов */
+    background-color: #f9f9f9; /* Легкий фон */
+}
+
+.profile-container a {
+    display: inline-block;  /* Обеспечим правильное выравнивание */
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 20px; /* Отступ сверху */
+    margin-bottom: 10px; /* Отступ снизу от границы */
+}
+
+.profile-container a:hover {
+    background-color: #0056b3;
+}
+
+.profile-container .logout-btn {
+    display: inline-block;  /* Выравнивание */
+    padding: 10px 20px;
+    background-color: #FF4C4C; /* Красный цвет для кнопки выхода */
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 10px; /* Отступ сверху */
+    margin-bottom: 20px; /* Отступ снизу от границы */
+}
+
+.profile-container .logout-btn:hover {
+    background-color: #FF2C2C;
+}
+
+/* Стили для списка продуктов */
+.product-list {
+    margin-top: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+.product-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+.product-list li .product-info {
+    flex-grow: 1;
+    margin-right: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+.product-list li .product-actions {
+    display: flex;
+    align-items: center; /* Выравнивание по вертикали */
+    gap: 10px; /* Отступы между кнопками */
+}
+
+/* Стили для кнопок удаления и изменения */
+.product-list li .product-actions a {
+    color: red;
+    text-decoration: none;
+}
+
+.product-list li .product-actions form {
+    display: inline;
+}
+
+/* Стили для формы изменения количества */
+.product-actions form {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.product-actions input {
+    width: 70px;
+    margin-right: 10px;
+    padding: 5px;
+    font-size: 14px;
+}
+
+.product-actions button {
+    padding: 6px 12px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+}
+
+.product-actions button:hover {
+    background-color: #45a049;
+}
+
+.product-actions .action-buttons {
+    display: flex; /* Для выравнивания кнопок горизонтально */
+    gap: 10px; /* Отступ между кнопками */
+}
+
+.product-actions .btn-delete {
+    background-color: #F44336;
+    color: white; /* Изменено: белый цвет для текста */
+    padding: 6px 12px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.product-actions .btn-delete:hover {
+    background-color: #d32f2f;
+    color: white;
+}
+
+/* Стили для кнопки изменения */
+.product-actions .btn-update {
+    background-color: #FF9800;
+    color: white;
+    font-size: 14px;
+    padding: 6px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.product-actions .btn-update:hover {
+    background-color: #f57c00;
+}
+
+/* Стили для формы добавления нового продукта */
+form {
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+form input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+button {
+    padding: 12px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Стиль для кнопки добавления нового продукта */
+.btn-primary {
+    background-color: #4CAF50;
+}
+
+.btn-primary:hover {
+    background-color: #45a049;
+}
+
+/* Стиль для кнопки изменения */
+.btn-update {
+    background-color: #FF9800;
+    color: white;
+    font-size: 14px;
+    padding: 6px 12px;
+    border-radius: 5px;
+}
+
+.btn-update:hover {
+    background-color: #f57c00;
+}

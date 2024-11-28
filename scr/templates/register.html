@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Регистрация</h2>
+    {% if error_message %}
+        <div class="error" style="color: red;">
+            {{ error_message.message }}
+        </div>
+    {% endif %}
+    <form method="POST">
+        <div class="form-group">
+            <label for="first_name">Имя:</label>
+            <input type="text" id="first_name" name="first_name" required>
+        </div>
+        <div class="form-group">
+            <label for="last_name">Фамилия:</label>
+            <input type="text" id="last_name" name="last_name" required>
+        </div>
+        <div class="form-group">
+            <label for="phone">Телефон:</label>
+            <input type="tel" id="phone" name="phone" required>
+        </div>
+        <div class="form-group">
+            <label for="gender">Пол:</label>
+            <select id="gender" name="gender" required>
+                <option value="Мужской">Мужской</option>
+                <option value="Женский">Женский</option>
+                <option value="Другой">Другой</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <button type="submit">Зарегистрироваться</button>
+    </form>
+{% endblock %}

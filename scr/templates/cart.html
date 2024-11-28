@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Корзина{% endblock %}
+
+{% block content %}
+<h1>Ваша корзина</h1>
+<ul>
+    {% for item in cart_items %}
+    <li>{{ item.product.name }} - {{ item.quantity }} x {{ item.product.price }} ₽</li>
+    {% endfor %}
+</ul>
+
+<p><strong>Итоговая стоимость:</strong> {{ total_price }} ₽</p>
+
+<!-- Кнопка купить -->
+<div style="text-align: center; margin-top: 20px;">
+    <form action="#" method="post"> <!-- Заглушка: действие можно изменить позже -->
+        <button type="submit" style="padding: 10px 20px; font-size: 16px; background-color: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer;">
+            Купить
+        </button>
+    </form>
+</div>
+{% endblock %}
